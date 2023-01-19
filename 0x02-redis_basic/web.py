@@ -8,6 +8,7 @@ rc = redis.Redis()
 count = 0
 
 
+
 def get_page(url: str) -> str:
     """ get a page and cach value"""
     rc.set(f"cached:{url}", count)
